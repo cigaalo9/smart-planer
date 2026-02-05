@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Smart Daily Planner & Expense Tracker - Manage tasks and track expenses efficiently"
+    />
+    <title>Dashboard - Smart Daily Planner</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <span class="logo-icon">📊</span>
+          <span>Smart Planner</span>
+        </div>
+
+        <nav class="nav">
+          <a href="index.html" class="nav-link active">Dashboard</a>
+          <a href="tasks.html" class="nav-link">Tasks</a>
+          <a href="expenses.html" class="nav-link">Expenses</a>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1 class="page-title">Dashboard</h1>
+
+      <!-- Summary Cards -->
+      <section class="dashboard-grid">
+        <!-- Tasks Summary -->
+        <div class="summary-card tasks" id="tasks-summary">
+          <div class="summary-card-header">
+            <span class="summary-card-title">Tasks</span>
+            <span class="summary-card-icon">✓</span>
+          </div>
+          <div class="summary-card-value">0</div>
+          <div class="summary-card-subtitle">Loading...</div>
+        </div>
+
+        <!-- Expenses Summary -->
+        <div class="summary-card expenses" id="expenses-summary">
+          <div class="summary-card-header">
+            <span class="summary-card-title">Expenses</span>
+            <span class="summary-card-icon">💰</span>
+          </div>
+          <div class="summary-card-value">$0.00</div>
+          <div class="summary-card-subtitle">Loading...</div>
+        </div>
+
+        <!-- Weather Widget -->
+        <div class="summary-card weather">
+          <div class="summary-card-header">
+            <span class="summary-card-title">Weather</span>
+            <span class="summary-card-icon">🌤️</span>
+          </div>
+          <div id="weather-widget">
+            <div class="loading">
+              <div class="spinner"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Activity -->
+      <section class="recent-section">
+        <div class="recent-grid">
+          <!-- Recent Tasks -->
+          <div class="recent-tasks">
+            <div class="recent-header">
+              <h2 class="recent-title">Recent Tasks</h2>
+              <a href="tasks.html" class="view-all-link">View All →</a>
+            </div>
+            <div id="recent-tasks-list">
+              <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading tasks...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Expenses -->
+          <div class="recent-expenses">
+            <div class="recent-header">
+              <h2 class="recent-title">Recent Expenses</h2>
+              <a href="expenses.html" class="view-all-link">View All →</a>
+            </div>
+            <div id="recent-expenses-list">
+              <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading expenses...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Actions -->
+      <section class="quick-actions">
+        <a href="tasks.html" class="btn btn-primary">➕ Add Task</a>
+        <a href="expenses.html" class="btn btn-secondary">💵 Add Expense</a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-text">
+        © 2026 Smart Daily Planner. All rights reserved.
+      </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/storage.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

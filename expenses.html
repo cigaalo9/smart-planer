@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Track your daily expenses by category with detailed breakdowns and summaries"
+    />
+    <title>Expenses - Smart Daily Planner</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/expenses.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <span class="logo-icon">📊</span>
+          <span>Smart Planner</span>
+        </div>
+
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Dashboard</a>
+          <a href="tasks.html" class="nav-link">Tasks</a>
+          <a href="expenses.html" class="nav-link active">Expenses</a>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1 class="page-title">Expense Tracking</h1>
+
+      <!-- Expense Summary -->
+      <div class="expense-summary">
+        <div class="summary-item total">
+          <div class="summary-label">Total Expenses</div>
+          <div class="summary-amount" id="total-expenses">$0.00</div>
+        </div>
+        <div class="summary-item monthly">
+          <div class="summary-label">This Month</div>
+          <div class="summary-amount" id="monthly-expenses">$0.00</div>
+        </div>
+        <div class="summary-item daily">
+          <div class="summary-label">Daily Average</div>
+          <div class="summary-amount" id="daily-average">$0.00</div>
+        </div>
+      </div>
+
+      <!-- Category Breakdown -->
+      <div class="category-breakdown">
+        <h2 class="breakdown-title">Expenses by Category</h2>
+        <div class="category-list" id="category-list">
+          <div class="loading">
+            <div class="spinner"></div>
+            <p>Loading categories...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expense Controls -->
+      <div class="expense-controls">
+        <div class="expense-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="food">Food</button>
+          <button class="filter-btn" data-filter="transport">Transport</button>
+          <button class="filter-btn" data-filter="utilities">Utilities</button>
+          <button class="filter-btn" data-filter="entertainment">
+            Entertainment
+          </button>
+          <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+        <button class="btn btn-secondary" id="add-expense-btn">
+          ➕ Add Expense
+        </button>
+      </div>
+
+      <!-- Expense List -->
+      <div id="expense-list">
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Loading expenses...</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Expense Modal -->
+    <div class="modal-overlay" id="expense-modal">
+      <div class="modal">
+        <div class="modal-header">
+          <h2 class="modal-title">Add New Expense</h2>
+          <button class="modal-close" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="expense-form">
+            <div class="form-row">
+              <!-- Amount -->
+              <div class="form-group">
+                <label for="expense-amount" class="form-label">Amount *</label>
+                <input
+                  type="number"
+                  id="expense-amount"
+                  class="form-input"
+                  placeholder="0.00"
+                  step="0.01"
+                  min="0.01"
+                  required
+                />
+                <span class="form-error"></span>
+              </div>
+
+              <!-- Category -->
+              <div class="form-group">
+                <label for="expense-category" class="form-label"
+                  >Category *</label
+                >
+                <select id="expense-category" class="form-select" required>
+                  <option value="food">🍔 Food</option>
+                  <option value="transport">🚗 Transport</option>
+                  <option value="utilities">💡 Utilities</option>
+                  <option value="entertainment">🎬 Entertainment</option>
+                  <option value="other">📦 Other</option>
+                </select>
+                <span class="form-error"></span>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+              <label for="expense-description" class="form-label"
+                >Description *</label
+              >
+              <input
+                type="text"
+                id="expense-description"
+                class="form-input"
+                placeholder="What did you spend on?"
+                maxlength="200"
+                required
+              />
+              <span class="form-error"></span>
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+              <label for="expense-date" class="form-label">Date *</label>
+              <input
+                type="date"
+                id="expense-date"
+                class="form-input"
+                required
+              />
+              <span class="form-error"></span>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+              <button
+                type="button"
+                class="btn btn-outline"
+                id="cancel-expense-btn"
+              >
+                Cancel
+              </button>
+              <button type="submit" class="btn btn-secondary">
+                Save Expense
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-text">
+        © 2026 Smart Daily Planner. All rights reserved.
+      </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/expenses.js"></script>
+  </body>
+</html>

@@ -1,0 +1,339 @@
+/* ===================================
+   Dashboard Specific Styles
+   =================================== */
+
+/* Summary Cards Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.summary-card {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--box-shadow-lg);
+  transition: transform var(--transition-fast);
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+}
+
+.summary-card.tasks {
+  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+}
+
+.summary-card.expenses {
+  background: linear-gradient(135deg, #50c878 0%, #3da560 100%);
+}
+
+.summary-card.weather {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+}
+
+.summary-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.summary-card-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.summary-card-icon {
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+.summary-card-value {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.summary-card-subtitle {
+  font-size: var(--font-size-sm);
+  opacity: 0.85;
+}
+
+/* Weather Widget */
+.weather-widget {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.weather-location {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-xs);
+}
+
+.weather-temp {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.weather-description {
+  font-size: var(--font-size-base);
+  text-transform: capitalize;
+  opacity: 0.9;
+}
+
+.weather-details {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-sm);
+}
+
+.weather-detail {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.weather-error {
+  font-size: var(--font-size-sm);
+  opacity: 0.8;
+}
+
+/* Recent Activity Section */
+.recent-section {
+  margin-top: var(--spacing-xl);
+}
+
+.recent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.recent-tasks,
+.recent-expenses {
+  background-color: var(--surface);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  box-shadow: var(--box-shadow);
+}
+
+.recent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--border);
+}
+
+.recent-title {
+  font-size: var(--font-size-lg);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.view-all-link {
+  font-size: var(--font-size-sm);
+  color: var(--primary-color);
+  font-weight: var(--font-weight-medium);
+}
+
+.view-all-link:hover {
+  text-decoration: underline;
+}
+
+/* Recent Task Items */
+.task-list-preview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.task-item-preview {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--background);
+  transition: background-color var(--transition-fast);
+}
+
+.task-item-preview:hover {
+  background-color: var(--surface-hover);
+}
+
+.task-checkbox-preview {
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.task-content-preview {
+  flex: 1;
+}
+
+.task-title-preview {
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.task-meta-preview {
+  display: flex;
+  gap: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.priority-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.priority-low {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.priority-medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.priority-high {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Recent Expense Items */
+.expense-list-preview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.expense-item-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--background);
+  transition: background-color var(--transition-fast);
+}
+
+.expense-item-preview:hover {
+  background-color: var(--surface-hover);
+}
+
+.expense-details {
+  flex: 1;
+}
+
+.expense-description {
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.expense-category {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  background-color: var(--primary-light);
+  color: white;
+  text-transform: capitalize;
+}
+
+.expense-amount {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--secondary-color);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-secondary);
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.3;
+}
+
+.empty-state-text {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-md);
+}
+
+.empty-state-action {
+  margin-top: var(--spacing-md);
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .recent-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .summary-card-value {
+    font-size: 2rem;
+  }
+  
+  .weather-temp {
+    font-size: 2.5rem;
+  }
+  
+  .quick-actions {
+    flex-direction: column;
+  }
+  
+  .quick-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-details {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .summary-card {
+    padding: var(--spacing-md);
+  }
+  
+  .summary-card-value {
+    font-size: 1.75rem;
+  }
+}
