@@ -1,5 +1,5 @@
 /* ===================================
-   Tasks Page Specific Styles
+   Tasks Page Specific Styles - Plain CSS
    =================================== */
 
 /* Task Controls */
@@ -7,36 +7,36 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--spacing-xl);
-  gap: var(--spacing-md);
+  margin-bottom: 2rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
 .task-filters {
   display: flex;
-  gap: var(--spacing-sm);
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 
 .filter-btn {
-  padding: var(--spacing-sm) var(--spacing-md);
-  border: 2px solid var(--border);
-  background-color: var(--surface);
-  color: var(--text-secondary);
-  border-radius: var(--border-radius-sm);
+  padding: 0.5rem 1rem;
+  border: 2px solid #dee2e6;
+  background-color: #ffffff;
+  color: #6c757d;
+  border-radius: 4px;
   cursor: pointer;
-  font-weight: var(--font-weight-medium);
-  transition: all var(--transition-fast);
+  font-weight: 500;
+  transition: all 0.15s ease;
 }
 
 .filter-btn:hover {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
+  border-color: #4a90e2;
+  color: #4a90e2;
 }
 
 .filter-btn.active {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background-color: #4a90e2;
+  border-color: #4a90e2;
   color: white;
 }
 
@@ -44,34 +44,34 @@
 .task-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: 1rem;
 }
 
 .task-item {
   display: flex;
   align-items: flex-start;
-  gap: var(--spacing-md);
-  padding: var(--spacing-lg);
-  background-color: var(--surface);
-  border: 2px solid var(--border);
-  border-radius: var(--border-radius);
-  transition: all var(--transition-fast);
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  transition: all 0.15s ease;
   position: relative;
 }
 
 .task-item:hover {
-  border-color: var(--primary-light);
-  box-shadow: var(--box-shadow);
+  border-color: #6ba3e8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .task-item.completed {
   opacity: 0.7;
-  background-color: var(--surface-hover);
+  background-color: #f1f3f5;
 }
 
 .task-item.completed .task-title {
   text-decoration: line-through;
-  color: var(--text-secondary);
+  color: #6c757d;
 }
 
 /* Task Checkbox */
@@ -90,73 +90,73 @@
 }
 
 .task-title {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
-  margin-bottom: var(--spacing-sm);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 0.5rem;
   word-wrap: break-word;
 }
 
 .task-description {
-  color: var(--text-secondary);
-  margin-bottom: var(--spacing-md);
+  color: #6c757d;
+  margin-bottom: 1rem;
   line-height: 1.6;
   word-wrap: break-word;
 }
 
 .task-meta {
   display: flex;
-  gap: var(--spacing-md);
+  gap: 1rem;
   flex-wrap: wrap;
   align-items: center;
-  font-size: var(--font-size-sm);
-  color: var(--text-light);
+  font-size: 0.875rem;
+  color: #adb5bd;
 }
 
 .task-date {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
+  gap: 0.25rem;
 }
 
 /* Task Actions */
 .task-actions {
   display: flex;
-  gap: var(--spacing-sm);
+  gap: 0.5rem;
   flex-shrink: 0;
 }
 
 .task-action-btn {
-  padding: var(--spacing-xs) var(--spacing-sm);
+  padding: 0.25rem 0.5rem;
   border: none;
   background-color: transparent;
-  color: var(--text-secondary);
+  color: #6c757d;
   cursor: pointer;
-  border-radius: var(--border-radius-sm);
-  transition: all var(--transition-fast);
-  font-size: var(--font-size-sm);
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  font-size: 0.875rem;
 }
 
 .task-action-btn:hover {
-  background-color: var(--surface-hover);
-  color: var(--text-primary);
+  background-color: #f1f3f5;
+  color: #212529;
 }
 
 .task-action-btn.edit:hover {
-  color: var(--primary-color);
+  color: #4a90e2;
 }
 
 .task-action-btn.delete:hover {
-  color: var(--danger);
+  color: #dc3545;
 }
 
 /* Add Task Form */
 .task-form {
-  background-color: var(--surface);
-  padding: var(--spacing-lg);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  margin-bottom: var(--spacing-xl);
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
 .task-form.hidden {
@@ -165,9 +165,9 @@
 
 .form-actions {
   display: flex;
-  gap: var(--spacing-md);
+  gap: 1rem;
   justify-content: flex-end;
-  margin-top: var(--spacing-lg);
+  margin-top: 1.5rem;
 }
 
 /* Modal Overlay */
@@ -182,7 +182,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  padding: var(--spacing-md);
+  padding: 1rem;
 }
 
 .modal-overlay.active {
@@ -190,13 +190,13 @@
 }
 
 .modal {
-  background-color: var(--surface);
-  border-radius: var(--border-radius-lg);
+  background-color: #ffffff;
+  border-radius: 12px;
   max-width: 600px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: var(--box-shadow-lg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   animation: modalSlideIn 0.3s ease;
 }
 
@@ -212,15 +212,15 @@
 }
 
 .modal-header {
-  padding: var(--spacing-lg);
-  border-bottom: 2px solid var(--border);
+  padding: 1.5rem;
+  border-bottom: 2px solid #dee2e6;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .modal-title {
-  font-size: var(--font-size-xl);
+  font-size: 1.5rem;
   margin: 0;
 }
 
@@ -228,43 +228,43 @@
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: var(--text-secondary);
+  color: #6c757d;
   cursor: pointer;
-  padding: var(--spacing-xs);
+  padding: 0.25rem;
   line-height: 1;
-  transition: color var(--transition-fast);
+  transition: color 0.15s ease;
 }
 
 .modal-close:hover {
-  color: var(--text-primary);
+  color: #212529;
 }
 
 .modal-body {
-  padding: var(--spacing-lg);
+  padding: 1.5rem;
 }
 
 /* Priority Indicators */
 .task-item[data-priority="high"] {
-  border-left: 4px solid var(--priority-high);
+  border-left: 4px solid #dc3545;
 }
 
 .task-item[data-priority="medium"] {
-  border-left: 4px solid var(--priority-medium);
+  border-left: 4px solid #ffc107;
 }
 
 .task-item[data-priority="low"] {
-  border-left: 4px solid var(--priority-low);
+  border-left: 4px solid #28a745;
 }
 
 /* Stats Bar */
 .task-stats {
   display: flex;
-  gap: var(--spacing-xl);
-  padding: var(--spacing-lg);
-  background-color: var(--surface);
-  border-radius: var(--border-radius);
-  margin-bottom: var(--spacing-xl);
-  box-shadow: var(--box-shadow);
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .stat-item {
@@ -273,15 +273,15 @@
 }
 
 .stat-value {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4a90e2;
   display: block;
 }
 
 .stat-label {
-  font-size: var(--font-size-sm);
-  color: var(--text-secondary);
+  font-size: 0.875rem;
+  color: #6c757d;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -289,24 +289,24 @@
 /* Empty State */
 .empty-tasks {
   text-align: center;
-  padding: var(--spacing-2xl) var(--spacing-lg);
-  color: var(--text-secondary);
+  padding: 3rem 1.5rem;
+  color: #6c757d;
 }
 
 .empty-tasks-icon {
   font-size: 4rem;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 1.5rem;
   opacity: 0.3;
 }
 
 .empty-tasks-text {
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--spacing-md);
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
 }
 
 .empty-tasks-subtext {
-  font-size: var(--font-size-base);
-  margin-bottom: var(--spacing-xl);
+  font-size: 16px;
+  margin-bottom: 2rem;
 }
 
 /* Responsive Adjustments */
@@ -331,7 +331,7 @@
   
   .task-stats {
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: 1rem;
   }
   
   .form-actions {
@@ -345,7 +345,7 @@
 
 @media (max-width: 480px) {
   .task-item {
-    padding: var(--spacing-md);
+    padding: 1rem;
   }
   
   .task-filters {
